@@ -8,23 +8,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Specht Car Detailing</title>
-  <style>
-    .highlight-section {
+
+
+<br>
+
+<!--STYLE FOR HEADING, SPECHT CAR DETAILING -->
+<style>
+
+.highlight-section {
       background-color: black;
       padding: 5px;
       margin: 20px;
       border-radius: 10px;
     }
-  </style>
-</head>
 
-
-
-<body bgcolor = #4A4A4A>
-<br>
-
-<!--STYLE FOR HEADING, SPECHT CAR DETAILING -->
-<style>
 
 * {
       margin: 0;
@@ -36,7 +33,6 @@
       height: 100%;
       background-color: #4A4A4A;
       font-family: Verdana, sans-serif;
-      display: flex;
       flex-direction: column;
     }
 
@@ -56,7 +52,7 @@ body{
       left: 50%;
       width: 1px;
       background-color: #ff2800; /* Color of the vertical line */
-      z-index: -1; /* Make sure it stays in the background */
+      z-index: 1; /* Make sure it stays in the background */
     }
 
 .heading-text {
@@ -151,14 +147,122 @@ body{
 footer.socials-section {
       background-color: black;
 	color: white;
-	padding: 20px 0;
+	padding: 40px 0;
 	text-align: center;
 	width: 100%;
 	margin-top: auto;
     }
 
 
+/*BEGINNING BEFORE AFTER STYLE*/
+
+.before-after-container {
+
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: 85px;
+	border-radius: 15px;
+	
+}
+
+.before-image{
+	width: 100%;
+	height: auto;
+	display: block;
+
+}
+
+
+
+.after-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	clip: rect(0,0,0,0);
+
+}
+
+
+.transition-bar {
+
+	position: absolute;
+	top: 0;
+	height: 100%;
+	left: 50%;
+	width: 5px;
+	background-color: black;
+	cursor: ew-resize;
+	z-index: 2;
+
+}
+
+/*ENDING BEFORE AFTER STYLE*/
+
+.image-grid-and-compare {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	margin: 0 25px;
+	gap: 75px;
+
+}
+
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr 1fr;
+	gap: 75px;
+	width: 550px;
+	margin-left: 60px;
+}
+
+.grid-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+}
+
+.grid-item img{
+	width: 100%;
+	aspect-ratio: 1/1;
+	border-radius: 10px:
+	object-fit: cover;
+
+}
+
+.grid-item p {
+	margin-top: 5px;
+	font-size: 17px;
+	color: black;
+	font-family: Verdana, sans-serif;
+
+}
+
 </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
 
 <div class="vertical-line"></div>
 
@@ -171,6 +275,8 @@ footer.socials-section {
 <div class = "button-container">
 	Towson, MD
 	<!--BUTTON FOR BOOKNOW -->
+<br>
+<br>
 <a href="htmltest.html">
 	<button class="button-BOOKNOW">Book Now</button>
 </a>
@@ -181,7 +287,7 @@ footer.socials-section {
 <div class = "triple-button-container">
 	<div class = "left-button">
 
-		<a href="htmltest.html">
+		<a href="Prices_Packages_Specht.html">
 			<button class="button-packages-prices">Packages and Prices</button>
 		</a>
 	</div>
@@ -191,7 +297,7 @@ footer.socials-section {
 		</a>
 	</div>
 	<div class = "right-button">
-		<a href="htmltest.html">
+		<a href="About_me_Specht.html">
 			<button class="button-packages-prices">About Me</button>
 		</a>
 	</div>
@@ -204,7 +310,7 @@ footer.socials-section {
 
 
 <!-- TEXT IN HIGHLIGHTED SECTION -->
-  <div class="highlight-section">
+ <div class="highlight-section">
     <h2 style = "color: white; margin: 10px; font-family: Verdana, sans-serif">Towson Based Car Detailing Services</h2>
     <ul style = "color: white; margin: 20px;">
 	<li>established in 2020</li>
@@ -213,13 +319,131 @@ footer.socials-section {
 	<br>
 	<li>bookable through website, phone or email</li>
 	</ul>
-  </div>
+ </div>
 
-  <p>This paragraph is outside the colored section and uses the default background.</p>
-	
+	<br>
+	<br>
+	<br>
+<div class = "image-grid-and-compare">
+	<div class = "image-grid">
+		<div class = "grid-item">
+			<img src = "dog.png" style = "height: 175px; width: 175px;">
+			<p>Pet Hair</p>
+		</div>
+		<div class = "grid-item">
+			<img src = "polisher.png" style = "height: 175px; width: 175px;">
+			<p>Scratch Removal</p>
+		</div>
+		<div class = "grid-item">
+			<img src = "carpet.png.webp" style = "height: 175px; width: 175px;">
+			<p>Carpet Conditioning</p>
+		</div>
+		<div class = "grid-item">
+			<img src = "odor.png" style = "height: 125px; width: 125px; margin-top: 35px;">
+			<p style = "margin-top: 20px;">Odor Removal</p>
+		</div>
+		<div class = "grid-item">
+			<img src = "tire.png" style = "height: 175px; width: 175px;">
+			<p>Tire Shine</p>
+		</div>
+		<div class = "grid-item">
+			<img src = "headlight.png" style = "height: 175px; width: 175px;">
+			<p>Headlight Buff</p>
+		</div>
+	</div>
+
+	<div class = "before-after-container">
+		<img src = "before1.jpeg" class = "before-image">
+		<img src = "after1.jpeg" class = "after-image">
+		<div class = "transition-bar"></div>
+	</div>
+</div>
+
+	<script>
+		const transitionBar = document.querySelector('.transition-bar');
+		const beforeAfterContainer = document.querySelector('.before-after-container');
+		const afterImage = document.querySelector('.after-image');
+
+		let isDragging = false;
+
+		function updateDivider(x) {
+			const containerRect = beforeAfterContainer.getBoundingClientRect();
+			let newLeft = x - containerRect.left;
+
+			if (newLeft < 0)
+				newLeft = 0;
+
+			if (newLeft > containerRect.width)
+				newLeft = containerRect.width;
+			
+			transitionBar.style.left = newLeft + 'px';
+			afterImage.style.clip = `rect(0px, ${newLeft}px, ${containerRect.height}px, 				0px)`;
+		}
+
+		function moveTransBar(e) {
+			if(!isDragging)
+				return;
+
+			updateDivider(e.clientX);
+		}
+
+
+		function moveTransBarHover(e) {
+			if (isDragging)
+				return;
+
+			updateDivider(e.clientX);
+		}
+
+		transitionBar.addEventListener('mousedown', (e) => {
+			isDragging = true;
+			updateDivider(e.clientX);
+
+		});
+
+		window.addEventListener('mouseup', () => {
+			isDragging = false;
+
+		});
+
+		window.addEventListener('mousemove', moveTransBar);
+
+		beforeAfterContainer.addEventListener('mousemove', moveTransBarHover);
+
+		window.addEventListener('load', () => {
+			const containerRect = beforeAfterContainer.getBoundingClientRect();
+			const initialLeft = containerRect.width * (2/5);
+			transitionBar.style.left = initialLeft + 'px';
+			afterImage.style.clip = `rect(0px, ${initialLeft}px, ${containerRect.height}px, 			0px)`;
+
+		});
+
+	</script>
+
+<br>
+<br>
+
 
 	<footer class = "socials-section">
-		<p>This is where socials will go</p>
+		<div style = "display: flex; align-items: flex-start; padding-left: 20px;">
+			<img src = "s04.png" style = "height: 100px; width: 100px; margin-left: 20px; display: block;">
+		<div>
+			<h1 style = "color: blue; text-align: left; margin-left: 150px; padding-top: 15px">Location</h1>
+			<br>
+			<br>
+			<p style = "margin-left: 150px;">100 Armagh Drive, Towson, Maryland, 21212</p>
+		</div>
+
+		<div>
+		<h1 style = "color: blue; text-align: left; padding-top: 15px; margin-left: 150px">My Socials</h1>
+		<div style = "display: flex; gap: 50px; margin-left: 150px; margin-top: 15px;">
+			<a href="https://www.linkedin.com/in/jensenspecht/"><img src = "linkedin.png" height = 40px 
+			width = 40px></a>
+			<a href="https://www.instagram.com/jensenspecht11/"><img src = "instagram.png" height = 40px 
+			width = 40px></a>
+		</div>
+		</div>
+	</div>
 	</footer>
 
 </body>
