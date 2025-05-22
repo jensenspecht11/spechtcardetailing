@@ -8,9 +8,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Specht Car Detailing</title>
-
-
-<br>
+</head>
 
 <!--STYLE FOR HEADING, SPECHT CAR DETAILING -->
 <style>
@@ -51,8 +49,8 @@ body{
      	bottom: 0;
      	left: 50%;
      	width: 1px;
-     	background-color: #ff2800; /* Color of the vertical line */
-     	z-index: 1; /* Make sure it stays in the background */
+     	background-color: #ff2800;
+     	z-index: 1;
     }
 
 .heading-text {
@@ -69,7 +67,6 @@ body{
      	justify-content: space-between; 
      	padding-top: 20px;
 	padding-left: 50px;
-	padding right: 50px;
     }
 
 .logo {
@@ -88,14 +85,14 @@ body{
 .button-BOOKNOW {
 	
 	font-family: Verdana, sans-serif;
-	border: 1;
+	border: 1px solid black;
 	color: white;
 	background: #FF5F1F;
 	border-radius: 8px;
 	text-align: center;
 	height: 40px;
 	width: 110px;
-	font-size: 18;
+	font-size: 18px;
 	margin-right: 25px;
 	cursor: pointer;
 }
@@ -113,7 +110,7 @@ body{
 }
 
 .location-text {
-	font-family: 'Autowide', cursive;
+	font-family: 'Audiowide', cursive;
 	color: #ff2800;
 	font-size: 20px;
 	margin-bottom: 10px;
@@ -259,7 +256,7 @@ footer.socials-section {
 .grid-item img{
 	width: 100%;
 	aspect-ratio: 1/1;
-	border-radius: 10px:
+	border-radius: 10px;
 	object-fit: cover;
 
 }
@@ -273,8 +270,65 @@ footer.socials-section {
 }
 
 
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1em;
+  }
+
+  .logo-container, .button-BOOKNOW {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5em;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+  }
+
+  nav a {
+    width: 80%;
+    text-align: center;
+  }
+
+  .services, .about-section, .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer > div {
+    margin-bottom: 1em;
+  }
+
+  .footer img {
+    max-width: 60px;
+  }
+
+  .book-now-button {
+    font-size: 1em;
+    padding: 0.5em 1em;
+  }
+
+  h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+}
+
+
+
 </style>
-</head>
 
 
 
