@@ -16,24 +16,24 @@
 <style>
 
 .highlight-section {
-      background-color: black;
-      padding: 5px;
-      margin: 20px;
-      border-radius: 10px;
+     	background-color: black;
+     	padding: 5px;
+     	margin: 20px;
+     	border-radius: 10px;
     }
 
 
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+     	margin: 0;
+     	padding: 0;
+     	box-sizing: border-box;
     }
 
     html, body {
-      height: 100%;
-      background-color: #4A4A4A;
-      font-family: Verdana, sans-serif;
-      flex-direction: column;
+     	height: 100%;
+     	background-color: #4A4A4A;
+     	font-family: Verdana, sans-serif;
+     	flex-direction: column;
     }
 
 
@@ -46,35 +46,43 @@ body{
 
 /*VERTICAL LINE DOWN THE MIDDLE*/
 .vertical-line {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 1px;
-      background-color: #ff2800; /* Color of the vertical line */
-      z-index: 1; /* Make sure it stays in the background */
+     	position: absolute;
+     	top: 0;
+     	bottom: 0;
+     	left: 50%;
+     	width: 1px;
+     	background-color: #ff2800; /* Color of the vertical line */
+     	z-index: 1; /* Make sure it stays in the background */
     }
 
 .heading-text {
-      font-size: 65px;
-      color: #ff2800;
+     	font-size: 65px;
+     	color: #ff2800;
 	font-family: 'Audiowide', cursive;
 	text-align: center;
 	flex: 1;     
 }
 
 .heading-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between; 
-      padding-top: 20px;
-	padding-left: 100;
+     	display: flex;
+     	align-items: flex-start;
+     	justify-content: space-between; 
+     	padding-top: 20px;
+	padding-left: 50px;
+	padding right: 50px;
     }
 
 .logo {
 	height: 100px;
-	width: 125px;
-	padding-right: 25px;
+	width: 100px;
+}
+
+.logo-button-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 10px;
+
 }
 
 .button-BOOKNOW {
@@ -93,17 +101,34 @@ body{
 }
 
 .button-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-	padding-top: -20px; 
-	padding-left: 620px;
-	font-size: 20;
-      color: #ff2800;
-	font-family: 'Audiowide', cursive;
-	text-align: center;
-	flex: 1;  
+     	display: flex;
+    	align-items: center;
+     	justify-content: center;
+	margin-top: 20px;
     }
+
+.location-booking {
+	text-align: center;
+
+}
+
+.location-text {
+	font-family: 'Autowide', cursive;
+	color: #ff2800;
+	font-size: 20px;
+	margin-bottom: 10px;
+	margin-top: -85px;
+
+}
+
+.button-container p {
+	font-family: 'Audiowide', cursive;
+	color: #ff2800;
+	font-size: 20px;
+	text-align: center;
+	align-items: center;
+
+}
 
 
 .triple-button-container {
@@ -247,6 +272,7 @@ footer.socials-section {
 
 }
 
+
 </style>
 </head>
 
@@ -269,18 +295,21 @@ footer.socials-section {
 <!-- HEADING -->
 <div class = "heading-container">
 	<h1 class="heading-text"> Specht Car Detailing </h1>
-	<img src = "s04.png" class = "logo">
+	<div class = "logo-button-wrapper">
+		<img src = "s04.png" class = "logo" style = "margin-right: 25px;">
+		<a href = "htmltest.html">
+			<button class = "button-BOOKNOW">Book Now</button>
+		</a>
+	</div>
 </div>
 
-<div class = "button-container">
-	Towson, MD
-	<!--BUTTON FOR BOOKNOW -->
-<br>
-<br>
-<a href="htmltest.html">
-	<button class="button-BOOKNOW">Book Now</button>
-</a>
+
+<div class="button-container">
+  <div class="location-booking">
+    <p class="location-text">Towson, MD</p>
+  </div>
 </div>
+
 
 <br>
 
