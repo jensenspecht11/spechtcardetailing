@@ -1,0 +1,120 @@
+<html>
+
+<head>
+<style>
+.before-after-container {
+
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	overflow: hidden;
+	
+}
+
+.before-image{
+	width: 100%;
+	height: auto;
+	display: block;
+
+}
+
+
+
+.after-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	clip: rect(0,0,0,0);
+
+}
+
+
+.transition-bar {
+
+	position: absolute;
+	top: 0;
+	height: 100%;
+	left: 50%;
+	width: 3px;
+	background-color: #ff2800;
+	cursor: ew-resize;
+	z-index: 2;
+
+}
+
+
+</style>
+</head>
+
+<body bgcolor = #4A4A4A>
+	<div class = "before-after-container">
+		<img src = "before.png" class = "before-image">
+		<img src = "after.png" class = "after-image">
+		<div class = "transition-bar"></div>
+	</div>
+
+	<script>
+		const transitionBar = document.querySelector('.transition-bar');
+		const beforeAfterContainer = document.querySelector('.before-after-container');
+		const afterImage = document.querySelector('.after-image');
+
+		let isDragging = false;
+
+		function updateDivider(x) {
+			const containerRect = beforeAfterContainer.getBoundingClientRect();
+			let newLeft = x - containerRect.left;
+
+			if (newLeft < 0)
+				newLeft = 0;
+
+			if (newLeft > containerRect.width)
+				newLeft = containerRect.width;
+			
+			transitionBar.style.left = newLeft + 'px';
+			afterImage.style.clip = `rect(0px, ${newLeft}px, ${containerRect.height}px, 				0px)`;
+		}
+
+		function moveTransBar(e) {
+			if(!isDragging)
+				return;
+
+			updateDivider(e.clientX);
+		}
+
+
+		function moveTransBarHover(e) {
+			if (isDragging)
+				return;
+
+			updateDivider(e.clientX);
+		}
+
+		transitionBar.addEventListener('mousedown', (e) => {
+			isDragging = true;
+			updateDivider(e.clientX);
+
+		});
+
+		window.addEventListener('mouseup', () => {
+			isDragging = false;
+
+		});
+
+		window.addEventListener('mousemove', moveTransBar);
+
+		beforeAfterContainer.addEventListener('mousemove', moveTransBarHover);
+
+		window.addEventListener('load', () => {
+			const containerRect = beforeAfterContainer.getBoundingClientRect();
+			const initialLeft = containerRect.width * (2/5);
+			transitionBar.style.left = initialLeft + 'px';
+			afterImage.style.clip = `rect(0px, ${initialLeft}px, ${containerRect.height}px, 			0px)`;
+
+		});
+
+	</script>
+</body>
+</html>
